@@ -3,13 +3,16 @@
 @section('content')
 <body class="hold-transition login-page">
     <div class="login-box">
-      <div class="login-logo">
-        {{-- <a href="{{ route('home') }}"><b>{{ config('app.name', 'Laravel') }}</b></a> --}}
-        <img src="{{ asset('logo1.png') }}" alt="" style="margin-bottom: -20px">
-      </div>
+      
       <!-- /.login-logo -->
       <div class="card card-primary card-outline">
-        <div class="card-body login-card-body">
+        <div class="card-header text-center">
+          <div class="login-logo">
+            {{-- <a href="{{ route('home') }}"><b>{{ config('app.name', 'Laravel') }}</b></a> --}}
+            <img src="{{ asset('logo1.png') }}" alt=""  style="width: 100%; margin-bottom: -50px; margin-top: -30px">
+          </div>
+        </div>
+        <div class="card-body">          
           <p class="login-box-msg">Sign in to start your session</p>
 
           <form action="{{ route('login') }}" method="post">
