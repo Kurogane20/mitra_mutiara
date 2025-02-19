@@ -69,7 +69,7 @@ class SuratController extends Controller
         $surat = Surat::with('perusahaan')->findOrFail($id);
 
         // **Generate QR Code**
-        $qrText = "Tandatangan Elektronik Novri Darsono - Direktur PT Mitra Mutiara untuk Penawaran SPARING PT.MANOOR BULATN LESTARI\n";
+        $qrText = "Tandatangan Elektronik Novri Darsono - Direktur PT Mitra Mutiara untuk Penawaran SPARING " .$surat->perusahaan->name."\n";
         $qrText .= "Nomor Surat: " . $surat->nomor_surat . "\n";
         $qrText .= "Tanggal: " . now()->format('d-m-Y');
 

@@ -15,6 +15,15 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/work', function () {
+    return view('work');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 // Home Route
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
